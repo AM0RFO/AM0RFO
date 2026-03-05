@@ -4,11 +4,15 @@ let numRings = 50;
 let currentRing = 0;
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(windowWidth, windowHeight);
 
   for (let i = 0; i < numRings; i++) {
     rings[i] = new Ring();
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
